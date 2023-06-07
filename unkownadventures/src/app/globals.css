@@ -116,3 +116,99 @@ a {
     color-scheme: dark;
   }
 }
+
+.bike-ride {
+  background: 
+  /* top, transparent red */ 
+  linear-gradient(
+    rgba(0, 0, 0, 0.35), 
+    rgba(0, 0, 0, 0.35)
+  ),
+  /* bottom, image */
+  url(https://images.pexels.com/photos/9007081/pexels-photo-9007081.jpeg);  
+  background-size: cover;
+}
+
+.cause-ride {
+  background: 
+  /* top, transparent red */ 
+  linear-gradient(
+    rgba(0, 0, 0, 0.35), 
+    rgba(0, 0, 0, 0.35)
+  ),
+  /* bottom, image */
+  url(https://images.pexels.com/photos/1033116/pexels-photo-1033116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);  
+  background-size: cover;
+}
+
+.offroad-ride {
+  background: 
+  /* top, transparent red */ 
+  linear-gradient(
+    rgba(0, 0, 0, 0.35), 
+    rgba(0, 0, 0, 0.35)
+  ),
+  /* bottom, image */
+  url(https://images.pexels.com/photos/5023538/pexels-photo-5023538.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);  
+  background-size: cover;
+}
+
+.outdoor-ride {
+  background: 
+  /* top, transparent red */ 
+  linear-gradient(
+    rgba(0, 0, 0, 0.35), 
+    rgba(0, 0, 0, 0.35)
+  ),
+  /* bottom, image */
+  url(https://images.pexels.com/photos/17073643/pexels-photo-17073643/free-photo-of-road-landscape-people-summer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);  
+  background-size: cover;
+}
+
+.events-ride {
+  background: 
+  /* top, transparent red */ 
+  linear-gradient(
+    rgba(0, 0, 0, 0.35), 
+    rgba(0, 0, 0, 0.35)
+  ),
+  /* bottom, image */
+  url(https://images.pexels.com/photos/9667019/pexels-photo-9667019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);  
+  background-size: cover;
+}
+
+.display-ride {
+  background: 
+  /* top, transparent red */ 
+  linear-gradient(
+    rgba(0, 0, 0, 0.35), 
+    rgba(0, 0, 0, 0.35)
+  ),
+  /* bottom, image */
+  url(https://images.pexels.com/photos/4999682/pexels-photo-4999682.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);  
+  background-size: cover;
+}
+
+.corporate-ride {
+  background: 
+  /* top, transparent red */ 
+  linear-gradient(
+    rgba(0, 0, 0, 0.35), 
+    rgba(0, 0, 0, 0.35)
+  ),
+  /* bottom, image */
+  url(https://images.pexels.com/photos/2422265/pexels-photo-2422265.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);  
+  background-size: cover;
+}
+
+.outact-ride {
+  background: 
+  /* top, transparent red */ 
+  linear-gradient(
+    rgba(0, 0, 0, 0.35), 
+    rgba(0, 0, 0, 0.35)
+  ),
+  /* bottom, image */
+  url(https://images.pexels.com/photos/3413678/pexels-photo-3413678.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);  
+  background-size: cover;
+}

@@ -1,30 +1,44 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
-import { useState } from 'react'
-
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [color, setColor] = useState('transparent');
+  const[textColor,setTextColor] = useState('white');
 
   const handleNav = () => {
     setNav(!nav);
   }
 
+ useEffect(() => {
+  const changeColor = () => {
+    if(window.scrollY >= 90) {
+      setColor('#ffffff')
+      setTextColor('#000000')
+    } else {
+        setColor('transparent')
+        setTextColor('white')
+    }
+  }
+  window.addEventListener('scroll', changeColor)
+ },[])
+
+
   return (
-    <div className='fixed left-0 top-0 w-full z-10 ease-in duration-300'>
-      <nav className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
+    <div style={{ backgroundColor: `${color}`}} className='fixed left-0 top-0 w-full z-10 ease-in duration-300'>
+      <nav className='max-w-[1400px] m-auto flex justify-between items-center p-4 text-white'>
         <Link href="/">
-          <h1 className='font-bold text-4xl text-green-400'>Unkown Adventures</h1>
+          <h1 style={{ color: `${textColor}`}} className='font-bold text-3xl text-green-400'>Unkown Adventures</h1>
         </Link>
-        <ul className='hidden md:flex text-xl'>
+        <ul style={{ color: `${textColor}`}} className='hidden md:flex text-xl'>
           <li className='p-4'>
-            <Link href="#" className='hover:text-green-400 ease-in duration-300'>Home</Link>
+            <Link href="/" className='hover:text-green-400 ease-in duration-300'>Home</Link>
           </li>
           <li className='p-4'>
-            <Link href="#" className='hover:text-green-400 ease-in duration-300'>About</Link>
+            <Link href="/about" className='hover:text-green-400 ease-in duration-300'>About</Link>
           </li>
           <li className='p-4'>
             <Link href="#" className='hover:text-green-400 ease-in duration-300'>Services</Link>
@@ -39,7 +53,7 @@ const Navbar = () => {
 
         {/* Mobile button */}
         <div onClick={handleNav} className='md:hidden block z-10'>
-          {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}  
+          {nav ? <AiOutlineClose size={20} style={{ color: `${textColor}`}} /> : <AiOutlineMenu size={20} style={{ color: `${textColor}`}}/>}  
         </div>
 
         {/* Mobile menu */}
