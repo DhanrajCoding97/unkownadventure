@@ -31,7 +31,7 @@ const Navbar = () => {
     <div style={{ backgroundColor: `${color}`}} className='fixed left-0 top-0 w-full z-10 ease-in duration-300'>
       <nav className='max-w-[1400px] m-auto flex justify-between items-center p-4 text-white'>
         <Link href="/">
-          <h1 style={{ color: `${textColor}`}} className='font-bold text-3xl text-green-400'>Unkown Adventures</h1>
+          <h1 style={{ color: `${textColor}`}} className='font-bold text-2xl md:text-3xl text-green-400'>Unkown Adventures</h1>
         </Link>
         <ul style={{ color: `${textColor}`}} className='hidden md:flex text-xl'>
           <li className='p-4'>

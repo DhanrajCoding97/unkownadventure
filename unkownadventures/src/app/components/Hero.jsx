@@ -22,7 +22,7 @@ const Hero = () => {
   ></div>
 
   <div
-    className="flex flex-col md:flex-row justify-between h-screen relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
+    className="flex flex-col md:flex-row md:justify-between gap-5 h-screen relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
   >
     <div>
       <h1 className="text-3xl font-extrabold sm:text-6xl">Travel <strong className="font-extrabold text-[#1CBE12]">Event</strong></h1>
