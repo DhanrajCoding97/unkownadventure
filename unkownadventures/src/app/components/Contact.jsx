@@ -4,7 +4,7 @@ import {IoMdBusiness} from 'react-icons/io'
 import {BsTelephone} from 'react-icons/bs'
 const Contact = () => {
   return (
-    <section className='max-w-[1400px] m-auto py-20'> 
+    <section className='max-w-[1400px] mt-24 m-auto'> 
         <h1 className='pb-12 text-center text-5xl md:text-6xl font-bold text-[#1CBE12]'>Contact <span className='text-[#F7D311]'>Us</span></h1>
         <div id="google-map" className='w-[90%] m-auto'>
                 <iframe
@@ -15,14 +15,14 @@ const Contact = () => {
                     className='rounded-xl'
                 ></iframe>    
         </div>
-        <div className='flex flex-col sm:flex-row items-center justify-between'>
+        <div className='flex flex-col sm:flex-row justify-between px-16 pt-5'>
             <form
             //   ref={form}
             id="contact-form"
-            className="p-5 max-w-[300px]"
+            className="max-w-[500px]"
             >
             <div>
-              <h3 className='font-bold text-3xl p-4'>Get in Touch</h3>
+              <h3 className='font-bold text-3xl pb-2'>Get in Touch</h3>
             </div>
             <div id="form-control" className="mb-3 pb-5 relative">
                 <input
@@ -68,8 +68,8 @@ const Contact = () => {
                 </button>
             </div>
             </form>
-            <div className='flex flex-col items-center justify-center'>
-                <h2 className='font-bold text-3xl text-center'>Contact Info</h2>
+            <div className='flex flex-col'>
+                <h2 className='font-bold text-3xl text-center pb-2'>Contact Info</h2>
                 <div className='flex items-center gap-2'>
                     <FiMapPin/>
                     <h3>Address : </h3>
@@ -91,7 +91,7 @@ const Contact = () => {
                     <BsTelephone />
                     <h3>Phone :</h3>
                 </div>
-                    <a href="tel:+098671 70214">098671 70214</a>
+                    <a href="tel:+098671 70214" className='underline hover:text-green-400 transition ease-in duration-300'>098671 70214</a>
             </div>
         </div>
     </section>

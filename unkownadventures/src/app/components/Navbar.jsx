@@ -41,13 +41,13 @@ const Navbar = () => {
             <Link href="/about" className='hover:text-green-400 ease-in duration-300'>About</Link>
           </li>
           <li className='p-4'>
-            <Link href="#" className='hover:text-green-400 ease-in duration-300'>Services</Link>
+            <Link href="/services" className='hover:text-green-400 ease-in duration-300'>Services</Link>
           </li>
           <li className='p-4'>
-            <Link href="#" className='hover:text-green-400 ease-in duration-300'>Testimonial</Link>
+            <Link href="/testimonial" className='hover:text-green-400 ease-in duration-300'>Testimonial</Link>
           </li>
           <li className='p-4'>
-            <Link href="#" className='hover:text-green-400 ease-in duration-300'>Contact</Link>
+            <Link href="/contact" className='hover:text-green-400 ease-in duration-300'>Contact</Link>
           </li>
         </ul>
 
@@ -60,19 +60,19 @@ const Navbar = () => {
         <div className={nav ? 'md:hidden absolute top-0 right-0 left-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300' : 'md:hidden absolute top-0 right-0 bottom-0 left-[-100%] flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300' }> 
           <ul>
             <li className='p-4 text-4xl hover:text-gray-400'>
-              <Link href="#">Home</Link>
+              <Link href="/" onClick={handleNav}>Home</Link>
             </li>
             <li className='p-4 text-4xl hover:text-gray-400'>
-              <Link href="#">About</Link>
+              <Link href="/about" onClick={handleNav}>About</Link>
             </li>
             <li className='p-4 text-4xl hover:text-gray-400'>
-              <Link href="#">Services</Link>
+              <Link href="/services" onClick={handleNav}>Services</Link>
             </li>
             <li className='p-4 text-4xl hover:text-gray-400'>
-              <Link href="#">Testimonial</Link>
+              <Link href="/testimonial" onClick={handleNav}>Testimonial</Link>
             </li>
             <li className='p-4 text-4xl hover:text-gray-400'>
-              <Link href="#">Contact</Link>
+              <Link href="/contact" onClick={handleNav}>Contact</Link>
             </li>
           </ul>
         </div>
