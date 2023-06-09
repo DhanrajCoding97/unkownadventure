@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const About = () => {
   return (
-    <section className='max-w-[1400px] mt-12 mx-auto px-4'>
+    <section className='max-w-[1400px] mt-24 mx-auto px-4'>
       <h1 className='text-center text-5xl md:text-6xl font-bold text-[#1CBE12] pb-10'>About <span className='text-[#F7D311]'>Us</span></h1>
         <div className='grid lg:grid-cols-2 md:gap-4'>
           <div className='grid grid-cols-2 grid-rows-6 md:gap-4 gap-0 h-[80vh]'>
