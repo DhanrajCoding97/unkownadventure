@@ -6,7 +6,7 @@ const Services = () => {
   return (
     <section className='mt-24'>
         <h1 className='text-center text-5xl md:text-6xl font-bold text-[#1CBE12]'>Our <span className='text-[#F7D311]'>Services</span></h1>
-        <div className='py-10 flex flex-col justify-center items-center h-full'>
+        <div className='pt-10 flex flex-col justify-center items-center h-full'>
           <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4'>
             <div className='bike-ride m-3 h-[425px] w-[300px] rounded-md flex flex-col justify-center items-center transition hover:cursor-pointer duration-300 ease-in hover:scale-105'>
               <h2 className='text-3xl font-bold pb-2'>BIKE RIDES</h2>
