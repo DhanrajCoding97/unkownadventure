@@ -1,29 +1,19 @@
+"use client"
+
 import React from 'react'
 import Link from 'next/link'
 import { BsWhatsapp } from "react-icons/bs";
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    // <section classNameName='relative w-full h-[100vh]'>
-    //     <div classNameName='absolute top-0 right-0 bottom-0 left-0 w-full h-full bg-black/80'></div>
-    //     {/* <video autoPlay muted loop classNameName='w-full h-full object-cover'>
-    //         <source src='/bgVideo.mp4'></source>
-    //     </video> */}
-    //     <div classNameName='custom-img p-2 m-auto absolute w-full h-full top-0 left-0 md:left-[13%] flex flex-col justify-center items-start'> 
-    //         <h1 classNameName='font-bold text-5xl md:text-7xl drop-shadow-2xl text-white'>Travel Event</h1>
-    //         <p classNameName=' max-w-[600px] drop-shadow-2xl py-2 text-2xl text-white'>We Are Tour & Event Company for all type of Adventure & Event Activities </p>
-    //     </div> 
-    // </section>
-    <section
-  className="relative bg-[url(https://images.pexels.com/photos/9789339/pexels-photo-9789339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)] bg-cover bg-center bg-no-repeat"
->
-  <div
-    className="absolute inset-0 bg-black/40"
-  ></div>
-
-  <div
-    className="flex flex-col md:flex-row md:justify-between gap-5 h-screen relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
-  >
+    <motion.section 
+    initial= {{opacity: 0}}
+    animate= {{opacity: 1}}
+    transition={{ type: "spring", stiffness: 100 }}
+    className="relative bg-[url(https://images.pexels.com/photos/9789339/pexels-photo-9789339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)] bg-cover bg-center bg-no-repeat">
+    <div className="absolute inset-0 bg-black/40"></div>
+    <div className="flex flex-col md:flex-row md:justify-between gap-5 h-screen relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
     <div>
       <h1 className="text-3xl font-extrabold sm:text-6xl">Travel <strong className="font-extrabold text-[#1CBE12]">Event</strong></h1>
 
@@ -48,7 +38,7 @@ const Hero = () => {
       </a>
     </div>
   </div>
-</section>
+</motion.section>
   )
 }
 

@@ -82,21 +82,18 @@ const Navbar = () => {
         <motion.div 
         className={nav ? 'md:hidden absolute top-0 right-0 left-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300' : 'md:hidden absolute top-0 right-0 bottom-0 left-[-100%] flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300' }> 
           <ul>
-            <li className='p-4 text-2xl hover:text-gray-400'>
-              <Link href="/" onClick={handleNav}>Home</Link>
+            {navLink.map(({link, name}) => (
+            <li key={name} className='p-3 text-2xl'>
+              <Link
+              onClick={handleNav}
+              key={name}
+              href={link}
+              className={`${pathname === link ? 'text-[#35D0BA] hover:text-[#35D0BA] ease-in duration-300':'hover:text-[#35D0BA] ease-in duration-300'}`}
+              >
+                {name}
+              </Link>
             </li>
-            <li className='p-4 text-2xl hover:text-gray-400'>
-              <Link href="/about" onClick={handleNav}>About</Link>
-            </li>
-            <li className='p-4 text-2xl hover:text-gray-400'>
-              <Link href="/services" onClick={handleNav}>Services</Link>
-            </li>
-            <li className='p-4 text-2xl hover:text-gray-400'>
-              <Link href="/testimonial" onClick={handleNav}>Testimonial</Link>
-            </li>
-            <li className='p-4 text-2xl hover:text-gray-400'>
-              <Link href="/contact" onClick={handleNav}>Contact</Link>
-            </li>
+          ))}
           </ul>
         </motion.div>
       </nav>
