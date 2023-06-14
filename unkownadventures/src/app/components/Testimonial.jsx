@@ -29,21 +29,14 @@ const Testimonial = () => {
             slidesPerView: 1,
             spaceBetween: 10,
           },
-          "@0.75": {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
           "@1.50": {
             slidesPerView: 2,
             spaceBetween: 20,
           },
         }}
-
         pagination={{
           clickable: true,
         }}
-        
-        
         modules={[Autoplay,Pagination]}
         className="mySwiper"
       >
