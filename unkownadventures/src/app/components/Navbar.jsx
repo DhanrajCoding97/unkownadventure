@@ -3,11 +3,10 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
-import { useRouter, usePathname} from 'next/navigation'
-import { motion } from 'framer-motion'
+import { usePathname} from 'next/navigation'
 
 const Navbar = () => {
-  const router = useRouter()
+  
   const pathname = usePathname();
   const navLink = [
     {
@@ -79,7 +78,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile menu */}
-        <motion.div 
+        <div 
         className={nav ? 'md:hidden absolute top-0 right-0 left-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300' : 'md:hidden absolute top-0 right-0 bottom-0 left-[-100%] flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300' }> 
           <ul>
             {navLink.map(({link, name}) => (
@@ -95,7 +94,7 @@ const Navbar = () => {
             </li>
           ))}
           </ul>
-        </motion.div>
+        </div>
       </nav>
     </div>
   )

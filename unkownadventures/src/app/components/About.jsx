@@ -1,9 +1,42 @@
-import React from 'react'
+"use client"
+
+import React, { useRef, useEffect } from 'react'
 import Image from 'next/image'
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const About = () => {
+  const ref = useRef(null)
+	const inView = useInView(ref)
+
+  const aboutVariants = {
+    hidden: { opacity: 0, y:-100},
+    visible: { opacity: 1, y: 0 },
+    transition: {
+      type: "spring",
+			stiffness: 250,
+			damping:20,
+      duration: 5
+    },
+  };
+
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start("visible");
+    }
+    if (!inView) {
+      animation.start("hidden");
+    }
+  }, [animation, inView]);
+
   return (
-    <section className='max-w-[1400px] mt-24 mx-auto px-4'>
+    <motion.section 
+		ref={ref}
+		initial="hidden"
+    animate={animation}
+    variants={aboutVariants}
+		className='max-w-[1400px] mt-24 mx-auto px-4'>
       <h1 className='text-center text-5xl md:text-6xl font-bold text-[#1CBE12] pb-10'>About <span className='text-[#F7D311]'>Us</span></h1>
         <div className='grid lg:grid-cols-2 md:gap-4'>
           <div className='grid grid-cols-2 grid-rows-6 md:gap-4 gap-0 h-[80vh]'>
@@ -61,7 +94,7 @@ const About = () => {
               </span>
           </div>
         </div>
-    </section>
+    </motion.section>
   )
 }
 
